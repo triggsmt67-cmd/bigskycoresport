@@ -12,18 +12,22 @@ import Testimonials from '../components/Testimonials';
 import FAQ from '../components/FAQ';
 import FinalCTA from '../components/FinalCTA';
 import Footer from '../components/Footer';
+import GlobalScrollLine from '../components/GlobalScrollLine'; // Added the continuous global line
 
 export default function Home() {
     return (
         <>
             <Head>
-                <title>Big Sky Coresport | Premier Gym in Missoula, MT</title>
-                <meta name="description" content="Join Big Sky Coresport, the premier gym in Missoula, MT. Expert coaching, supportive community, and results-driven programming for all levels." />
+                <title>Big Sky Coresport | Premier Gym in Great Falls, MT</title>
+                <meta name="description" content="Join Big Sky Coresport, the premier gym in Great Falls, MT. Expert coaching, supportive community, and results-driven programming for all levels." />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <div className="flex flex-col min-h-screen bg-white">
+            <div className="flex flex-col min-h-screen bg-white relative">
+                {/* Global Scrolling Indicator - Won't break design */}
+                <GlobalScrollLine />
+                
                 <Header />
                 <main>
                     <Hero />
